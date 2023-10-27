@@ -1,41 +1,16 @@
-/*-----------------------------------------------------------------------------------
-Template Name: New HTML5 Template,
-Template URI: http://www.themectg.com
-Description: This is html5 template
-Author: Themectg
-Author URI: http://www.themectg.com
-Version: 1.0
------------------------------------------------------------------------------------
-CSS INDEX
-===================
-1. Google font
-2. Theme Default CSS
-3. Helper-class
-4. Button-style
-5. Mainmenu-area
-6. Section-Background
-7. Header-style
-8. Headline-style
-9. Skills-area
-10. Service-area
-11. Work-area
-12. Team-area
-13. Bar-effect-css
-14. Masp style
-15. Form-style
-16. Scroll-To-Top-Button
-17. Preloader-css
------------------------------------------------------------------------------------*/
+
 
 /*-----------------
 1. Google font
 ------------------*/
 
-@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700');
+
 
 /*-------------------
 2. Theme Default CSS
 --------------------*/
+
+
 
 a {
     text-decoration: none;
@@ -65,6 +40,7 @@ h3,
 h4,
 h5,
 h6 {
+    font-family: 'Dinar','OpenSans';
     margin: 0 0 10px;
     font-weight: 600;
 }
@@ -75,7 +51,8 @@ body {
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    direction: rtl;
+    font-family: 'Yekan', 'Dinar','OpenSans';
     font-weight: 400;
     font-size: 15px;
     line-height: 1.8;
@@ -88,6 +65,7 @@ body {
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus {
+     box-shadow: 0 0 0px 1000px white inset !important;
     -webkit-box-shadow: 0 0 0px 1000px white inset !important;
 }
 
@@ -291,6 +269,7 @@ input:-webkit-autofill:focus {
 /**
 *Mainmenu-area
 **/
+    
 
 .mainmenu-area {
     position: fixed;
@@ -366,8 +345,7 @@ input:-webkit-autofill:focus {
 *Header-area
 **/
 
-.client-area,
-.header-area {
+.client-area{
     background: #000000 url('images/parallax-2.jpg') no-repeat scroll center center / cover;
 }
 
@@ -406,13 +384,11 @@ input:-webkit-autofill:focus {
 }
 
 .screen-slider.owl-carousel .owl-item {
-    text-align: center
+    text-align: center;
 }
 
 .screen-slider .owl-controls {
-    position: absolute;
-    left: 0;
-    top: 100%;
+   text-align: center;
 }
 
 .screen-slider .owl-controls .owl-nav > div {
@@ -432,7 +408,7 @@ input:-webkit-autofill:focus {
     content: "/";
     position: absolute;
     left: 50%;
-    top: 12px;
+    top: 0px;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%)
 }
@@ -696,20 +672,22 @@ input:-webkit-autofill:focus {
 }
 
 #accordion .panel .panel-title {
-    padding: 30px 0 30px 60px;
+    padding: 30px 60px 30px 0px;
     position: relative;
 }
 
 #accordion .panel .panel-collapse {
-    padding-left: 60px;
+    padding-right: 60px;
 }
 
+#accordion .panel .panel-title a span {
+    right: 0;
+}
 #accordion .panel .panel-title a span:after,
 #accordion .panel .panel-title a span:before,
 #accordion .panel .panel-title a span {
     content: '';
     position: absolute;
-    left: 0;
     top: 20px;
     width: 36px;
     height: 36px;
@@ -802,7 +780,7 @@ input:-webkit-autofill:focus {
 .side-icon-box {
     margin-bottom: 30px;
     position: relative;
-    padding-left: 80px;
+    padding-right: 80px;
 }
 
 .side-icon-box a {
@@ -811,7 +789,7 @@ input:-webkit-autofill:focus {
 
 .side-icon-box .side-icon {
     position: absolute;
-    left: 0;
+    right: 0;
     top: 0;
     width: 60px;
 }
@@ -822,7 +800,8 @@ input:-webkit-autofill:focus {
 }
 
 .footer-middle {
-    margin-bottom: 60px;
+    margin-top: 60px;
+    
 }
 
 .footer-bottom {

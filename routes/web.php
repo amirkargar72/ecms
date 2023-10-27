@@ -11,8 +11,12 @@
 |
 */
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::resource('headers','HeaderController')->only(['edit','update']);
+Route::get('/' ,"indexController@main");
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

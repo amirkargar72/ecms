@@ -25,7 +25,10 @@
         @include('fragments.nav')
 
         <main class="py-4">
+            <div class=container>
+            @include('fragments.message')
             @include('fragments.errors')
+            </div>
             @yield('content')
         </main>
     </div>

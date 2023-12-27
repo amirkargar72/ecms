@@ -32,3 +32,6 @@ body{
 .form-check-label{
     margin-right: 20px;
 }
+.delete-photo:hover{
+text-decoration: none;
+}

@@ -2,14 +2,14 @@
 
 @section('content')
     <form class= "container" action="{{ url("headers/$header->id") }}" method= "post" enctype="multipart/form-data">
-        
-    </>>
+
 
 
         @csrf
         {{ method_field('PUT') }}
         <div class= "row">
 
+            <h3 class="col-12 dinar mb-4 text-info">ویرایش هدر</h3>
             <div class= "col-md-3 my-2">
                 <label for="title">عنوان هدر</label>
                 <input type="text" name="tatle" id="title" value="{{ $header->title }}" class="form-control">
@@ -27,8 +27,7 @@
             </div>
             <div class= "col-md-3 my-2">
                 <label for="background">تصویر زمینه</label>
-                <input type="file" link="background" name="bg_path" id="background"
-                    class="form-control">
+                <input type="file" link="background" name="bg_path" id="background" class="form-control">
             </div>
 
             <div class= "col-md-12 my-2">
@@ -56,14 +55,38 @@
 
             </div>
             <hr class= "col-12">
-            <div class="col-md-5"></div>
-            <div class="col-md-2">
+            <h3 class="col-12 dinar mb-4 text-info">عکس های اسلایدر</h3>
+
+            @foreach ($header->photos as $photo)
+                <div class="col-md-3 my-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="{{ asset($photo->path) }}" class="img-fluid">
+                        </div>
+                        <div class="card-footer text text-center">
+                            <a href="javascript:void" class="delete-photo">
+                                <i class="ti-trash text-danger delete-photo s-2x "></i></a>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+            <hr class="col-md-12">
+            <div class= "col-md-3 my-2 mr-auto  ml-auto">
+                <label for="slider">آپلود عکس جدید برای اسلایدر</label>
+                <input type="file" name="slider[]" id="slider" class="form-control" multiple>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-2 mr-auto  ml-auto ">
                 <button type="submit" class="btn btn-primary btn-block">
 
                     <i class="ti-check ml-1"></i>
                     تایید</button>
 
             </div>
+        </div>
+
 
         </div>
     </form>

@@ -34,6 +34,8 @@
     </div>
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/panel.js') }}"></script>
+
 </body>
 
 </html>
